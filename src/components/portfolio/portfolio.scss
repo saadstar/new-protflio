@@ -71,7 +71,7 @@
         gap: 30px;
 
         @include mobile {
-          transform: none !important;
+          transform: translateY(-20%) !important;
           padding: 10px;
           align-items: center;
           text-align: center;
