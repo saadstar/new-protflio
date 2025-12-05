@@ -1,12 +1,11 @@
 import React,{Suspense} from "react";
 import "./app.scss";
-import Contact from "./components/contact/Contact";
 import Cursor from "./components/cursor/Cursor";
-import Hero from "./components/hero/Hero";
 import Navbar from "./components/navbar/Navbar";
 import Parallax from "./components/parallax/Parallax";
 import Portfolio from "./components/portfolio/Portfolio";
 import Services from "./components/services/Services";
+import Skills from "./components/Skills/Skills";
 
 const App = () => {
   const Contact = React.lazy(() => import('./components/contact/Contact'));
@@ -14,28 +13,30 @@ const App = () => {
   return (
     <div>
       <Cursor />
-      <section id="Homepage">
+      <section id="Home">
         <Navbar />
-        <Suspense fallback='saadtest1'>
+        <Suspense fallback='hero'>
           <Hero />
           </Suspense>
       </section>
-      <section id="Services">
+      <section >
         <Parallax type="services" />
       </section>
       <section>
-        <Services />
+        <Services id="Services"/>
       </section>
       <section id="Portfolio">
         <Parallax type="portfolio" />
       </section>
-      <Portfolio />
-      <section id="Contact">
+      <section>
+        <div style={{ height: '600px', position: 'relative' }}>
+  <Skills bend={3} textColor="#ffffff" borderRadius={0.05} scrollEase={0.02}/>
+</div>
+      </section>
+      <Portfolio id="projects"/>
+      <section id="Contact Us">
        <Suspense fallback='saadtest'> <Contact /></Suspense>
       </section>
-      {/* Framer Motion Crash Course */}
-      {/* <Test/>
-    <Test/> */}
     </div>
   );
 };

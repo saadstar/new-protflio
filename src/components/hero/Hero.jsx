@@ -1,5 +1,7 @@
 import "./hero.scss";
 import { motion } from "framer-motion";
+import { FiDownload } from "react-icons/fi";
+import { FaWhatsapp } from "react-icons/fa";
 
 const textVariants = {
   initial: {
@@ -37,7 +39,24 @@ const sliderVariants = {
   },
 };
 
+const iconBounce = {
+  animate: {
+    y: [0, 8, 0],
+    transition: {
+      duration: 1.2,
+      repeat: Infinity,
+      ease: "easeInOut",
+    },
+  },
+};
+
 const Hero = () => {
+  const downloadResume = () => {
+    const link = document.createElement("a");
+    link.href = "/heshamsaad.pdf";
+    link.download = "heshamsaad.pdf";
+    link.click();
+  };
   return (
     <div className="hero">
       <div className="wrapper">
@@ -49,13 +68,29 @@ const Hero = () => {
         >
           <motion.h2 variants={textVariants}>HESHAM SAAD SELIM</motion.h2>
           <motion.h1 variants={textVariants}>
-          Senior  Web Developer
+          Senior  Web Developer 
           </motion.h1>
           <motion.div variants={textVariants} className="buttons">
-            <motion.button variants={textVariants}>
-              See the Latest Works
+            <motion.button
+              variants={textVariants}
+              onClick={downloadResume}
+            >
+              <span>Download Resume</span>
+
+              <motion.span variants={iconBounce} animate="animate">
+                <FiDownload style={{ fontSize: 20 }} />
+              </motion.span>
             </motion.button>
-            <motion.button variants={textVariants}>Contact Me</motion.button>
+          <motion.button
+  variants={textVariants}
+  onClick={() => window.open("https://wa.me/201275794590", "_blank")}
+  className="flex items-center gap-2"
+>
+<span>
+  Contact Me
+</span>
+  <FaWhatsapp style={{ fontSize: 20 }}  />
+</motion.button>
           </motion.div>
           <motion.img
             variants={textVariants}
@@ -71,7 +106,7 @@ const Hero = () => {
         initial="initial"
         animate="animate"
       >
-       fullstack (MERN) developer
+       fullstack developer
       </motion.div>
       <div className="imageContainer">
         <img src="/hero.png" alt="" />

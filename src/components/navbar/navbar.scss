@@ -23,15 +23,39 @@
         display: none;
       }
     }
+.social {
+  display: flex;
+  gap: 20px;
+  align-items: center;
 
-    .social {
-      display: flex;
-      gap: 20px;
+  a {
+    text-decoration: none;
 
-      img {
-        width: 18px;
-        height: 18px;
+    .icon {
+      font-size: 28px;
+      transition: transform 0.2s ease;
+
+      &:hover {
+        transform: scale(1.1);
       }
     }
+
+    .github {
+      color: #ffffff;
+    }
+
+    .linkedin {
+      color: #0077b5;
+    }
+
+    .facebook {
+      color: #1877f2;
+    }
+
+    .email {
+      color: #d9534f;
+    }
+  }
+}
   }
 }

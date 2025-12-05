@@ -62,11 +62,11 @@ const Contact = () => {
         </motion.div>
         <motion.div className="item" variants={variants}>
           <h2>Address</h2>
-          <span>Hello street New York</span>
+          <span>New Cairo - Cairo - Egypt</span>
         </motion.div>
         <motion.div className="item" variants={variants}>
           <h2>Phone</h2>
-          <span>+20 1275794590</span>
+          <span>+20 01275794590</span>
         </motion.div>
       </motion.div>
       <div className="formContainer">
@@ -109,7 +109,7 @@ const Contact = () => {
           <input type="text" required placeholder="Name" name="name"/>
           <input type="email" required placeholder="Email" name="email"/>
           <textarea rows={8} placeholder="Message" name="message"/>
-          <button>Submit</button>
+          <button>Send</button>
           {error && "Error"}
           {success && "Success"}
         </motion.form>
