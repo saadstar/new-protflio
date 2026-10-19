@@ -96,6 +96,14 @@ const Services = () => {
           <img src="/img/download.webp" alt='ezeats' width={220} height={170} />
           <button>EGYPT</button>
         </motion.div>
+        <motion.div
+          className="box"
+          whileHover={{ background: "lightgray", color: "black" }}
+        >
+          <h2>Alasi</h2>
+          <img src="/img/alasi.png" alt='alasi' width={220} height={170} />
+          <button>SAUDI ARABIA</button>
+        </motion.div>
       </motion.div>
     </motion.div>
   );
