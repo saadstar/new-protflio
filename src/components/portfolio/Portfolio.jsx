@@ -8,6 +8,7 @@ const items = [
     title: "Alasi",
     img: "./img/alasi-project.jpeg",
     desc: "The Alasi project is a comprehensive business management platform that includes three main modules: Recruitment, which manages recruitment requests, candidate evaluations, documentation, and recruitment workflows; Sponsorship Transfer, which handles sponsorship transfer requests, document processing, approvals, and transfer tracking; and Labor Leasing, which manages client requests, workforce allocation, contracts, and leasing operations. The platform also provides workflow management, status tracking, backend API integration, authentication, and role-based access control to streamline operations and improve coordination across departments.",
+    demo: "https://istikdam.isnadsoft.com/dashboard/recruitment",
   },
   {
     id: 6,
