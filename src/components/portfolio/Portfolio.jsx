@@ -4,6 +4,12 @@ import { motion, useScroll, useSpring, useTransform } from "framer-motion";
 
 const items = [
   {
+    id: 7,
+    title: "Alasi",
+    img: "./img/alasi-project.jpeg",
+    desc: "The Alasi project is a comprehensive business management platform that includes three main modules: Recruitment, which manages recruitment requests, candidate evaluations, documentation, and recruitment workflows; Sponsorship Transfer, which handles sponsorship transfer requests, document processing, approvals, and transfer tracking; and Labor Leasing, which manages client requests, workforce allocation, contracts, and leasing operations. The platform also provides workflow management, status tracking, backend API integration, authentication, and role-based access control to streamline operations and improve coordination across departments.",
+  },
+  {
     id: 6,
     title: "Saudi Export Gate",
     img: "./img/exportgate.webp",
@@ -11,7 +17,7 @@ const items = [
     demo:"https://exportgate.sa/"
   },
   {
-    id: 0,
+    id: 8,
     title: "EzEats Managment App",
     img: "./img/ezeatsProject.png",
     desc: "it is live Project for mange the waiter side for a resturants and caching the orders ,its build using react with typescript as frontend and sashido services for saving the data",
@@ -66,10 +72,11 @@ const Single = ({ item }) => {
           <motion.div className="textContainer" style={{y}}>
             <h2>{item.title}</h2>
             <p>{item.desc}</p>
-              <a href={ item.demo}  target="blank">
-            <button>
-                See Demo
-              </button></a>
+            {item.demo && (
+              <a href={item.demo} target="blank" rel="noreferrer">
+                <button>See Demo</button>
+              </a>
+            )}
           </motion.div>
         </div>
       </div>
